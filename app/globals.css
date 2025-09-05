@@ -4,26 +4,26 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color tokens to match FTA Financial brand colors */
-  --background: oklch(1 0 0); /* White */
-  --foreground: oklch(0.25 0 0); /* Dark Gray #1f2937 */
-  --card: oklch(0.98 0 0); /* Light Gray #f8fafc */
-  --card-foreground: oklch(0.25 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.25 0 0);
-  --primary: oklch(0.55 0.15 250); /* Corporate Blue #2575fc */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.65 0.12 220); /* Sky Blue #1e90ff */
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.98 0 0); /* Light Gray #f8fafc */
-  --muted-foreground: oklch(0.45 0 0); /* Medium Gray #4b5563 */
-  --accent: oklch(0.65 0.12 220); /* Sky Blue #1e90ff */
-  --accent-foreground: oklch(1 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.92 0 0); /* Light border #e5e7eb */
-  --input: oklch(0.98 0 0);
-  --ring: oklch(0.55 0.15 250 / 0.5); /* Primary blue with opacity */
+    /* Updated color tokens to match FTA Financial brand colors with #0d77c5 */
+    --background: oklch(1 0 0); /* White */
+    --foreground: oklch(0.25 0 0); /* Dark Gray */
+    --card: oklch(0.98 0 0); /* Light Gray */
+    --card-foreground: oklch(0.25 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.25 0 0);
+    --primary: oklch(0.48 0.18 245); /* Updated to #0d77c5 */
+    --primary-foreground: oklch(1 0 0);
+    --secondary: oklch(0.58 0.15 235); /* Lighter complementary blue */
+    --secondary-foreground: oklch(1 0 0);
+    --muted: oklch(0.98 0 0);
+    --muted-foreground: oklch(0.45 0 0);
+    --accent: oklch(0.58 0.15 235);
+    --accent-foreground: oklch(1 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --destructive-foreground: oklch(1 0 0);
+    --border: oklch(0.92 0 0);
+    --input: oklch(0.98 0 0);
+    --ring: oklch(0.48 0.18 245 / 0.5);
   --chart-1: oklch(0.5 0.15 240);
   --chart-2: oklch(0.6 0.12 230);
   --chart-3: oklch(0.55 0.15 250);
@@ -75,9 +75,38 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-/* Added custom gradient class for FTA Financial brand buttons */
+/* Updated brand gradient using #0d77c5 */
 .bg-brand-gradient {
-  background-image: linear-gradient(270deg, #6a11cb, #2575fc);
+  background-image: linear-gradient(135deg, #0d77c5, #4a90e2, #0d77c5);
+  background-size: 200% 200%;
+  animation: gradient-flow 4s ease-in-out infinite;
+}
+
+.bg-brand-gradient-vertical {
+  background-image: linear-gradient(180deg, #0d77c5, #2980b9);
+}
+
+.bg-brand-gradient-radial {
+  background-image: radial-gradient(circle at center, #0d77c5, #1e5799);
+}
+
+@keyframes gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #0d77c5, #4a90e2);
+  border: none;
+  box-shadow: 0 4px 15px rgba(13, 119, 197, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0a5ea3, #3a7bc8);
+  box-shadow: 0 6px 20px rgba(13, 119, 197, 0.4);
+  transform: translateY(-2px);
 }
 
 /* Add animation classes for scroll-triggered animations */
