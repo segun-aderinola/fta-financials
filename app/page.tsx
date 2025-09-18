@@ -1,212 +1,248 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { ArrowRight, Shield, TrendingUp, Users, CheckCircle } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { FadeIn, SlideInLeft, SlideInRight, ScaleIn } from "@/components/animations"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import {
+  ArrowRight,
+  Shield,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  Star,
+  Award,
+  Target,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  FadeIn,
+  SlideInLeft,
+  SlideInRight,
+  ScaleIn,
+} from "@/components/animations";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
+      {/* Hero Section - Keep as is */}
       <section className="relative bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <SlideInLeft className="space-y-8">
-              <h1 className="text-4xl lg:text-6xl font-bold text-foreground text-balance">
+              <h1 className="text-4xl lg:text-6xl font-bold text-foreground text-balance capitalize">
                 Secure today{" "}
                 <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                   Prosper tomorrow
                 </span>
               </h1>
               <p className="text-xl text-muted-foreground text-pretty max-w-2xl">
-                Empowering Individuals and Businesses to Achieve Financial Freedom through expert solutions, trusted
-                partnerships, and innovative financial services.
+                Empowering Individuals and Businesses to Achieve Financial
+                Freedom through expert solutions, trusted partnerships, and
+                innovative financial services.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild size="lg" className="bg-brand-gradient hover:opacity-90 text-white">
+                <Button
+                  asChild
+                  size="lg"
+                  className=" hover:opacity-90 text-white hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                >
                   <Link href="/about">
                     Learn More <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg">
+                <Button asChild variant="outline" size="lg" className="hover:bg-primary hover:text-white transition-all duration-300">
                   <Link href="/services">Discover Our Services</Link>
                 </Button>
               </div>
             </SlideInLeft>
             <SlideInRight delay={200} className="relative">
-              <Image
-                src="/professional-business-team-handshake-financial-gro.jpg"
-                alt="Professional financial consultation"
-                width={600}
-                height={500}
-                className="rounded-lg shadow-2xl"
-                priority
-              />
+              <div className="relative group">
+                <div className="absolute -inset-4 rounded-3xl duration-500"></div>
+                <Image
+                  src="/man-holding-phone-removebg-preview.png"
+                  alt="Professional financial consultation"
+                  width={600}
+                  height={500}
+                  className="relative rounded-3xl transition-transform duration-500"
+                  priority
+                />
+              </div>
             </SlideInRight>
           </div>
         </div>
       </section>
 
       {/* Introduction/Overview Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <FadeIn className="relative">
-              <Image
-                src="/modern-office-consultation-professional-meeting-fi.jpg"
-                alt="Professional office consultation"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </FadeIn>
-            <SlideInRight delay={300} className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">
-                Expert Financial Solutions for Your Success
-              </h2>
-              <p className="text-lg text-muted-foreground text-pretty">
-                FTA Financial Company Ltd is committed to providing expert financial solutions for businesses and
-                individuals, helping them unlock financial potential and drive success through innovative services and
-                strategic partnerships.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Tailored Solutions</h3>
-                    <p className="text-muted-foreground">
-                      Customized financial services designed to meet your unique needs and goals.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Expert Guidance</h3>
-                    <p className="text-muted-foreground">
-                      Professional advice from experienced financial specialists and industry experts.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-semibold text-foreground">Proven Results</h3>
-                    <p className="text-muted-foreground">
-                      Track record of helping clients achieve their financial objectives and growth targets.
-                    </p>
+            <FadeIn className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+              <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden group-hover:shadow-3xl transition-shadow duration-500">
+                <Image
+                  src="/launching-startup.jpg"
+                  alt="Professional office consultation"
+                  width={500}
+                  height={400}
+                  className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4">
+                    <h4 className="font-bold text-gray-900 mb-2">Expert Consultation</h4>
+                    <p className="text-sm text-gray-600">Trusted by 1000+ businesses</p>
                   </div>
                 </div>
               </div>
-              <Button asChild className="bg-brand-gradient hover:opacity-90 text-white">
-                <Link href="/services">
-                  Discover Our Services <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+            </FadeIn>
+
+            <SlideInRight delay={300} className="space-y-6">
+              <div className="relative">
+                <div className="absolute -left-4 top-0 w-1 h-16 bg-gradient-to-b from-primary to-secondary rounded-full"></div>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-balance">
+                  Expert Financial Solutions for Your Success
+                </h2>
+              </div>
+
+              <p className="text-lg text-gray-600 leading-relaxed">
+                FTA Financial Company Ltd is committed to providing expert
+                financial solutions for businesses and individuals, helping them
+                unlock financial potential and drive success through innovative
+                services and strategic partnerships.
+              </p>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    title: "Tailored Solutions",
+                    desc: "Customized financial services designed to meet your unique needs and goals.",
+                    icon: <Target className="h-5 w-5" />
+                  },
+                  {
+                    title: "Expert Guidance",
+                    desc: "Professional advice from experienced financial specialists and industry experts.",
+                    icon: <Award className="h-5 w-5" />
+                  },
+                  {
+                    title: "Proven Results",
+                    desc: "Track record of helping clients achieve their financial objectives and growth targets.",
+                    icon: <Star className="h-5 w-5" />
+                  },
+                ].map((item, index) => (
+                  <FadeIn key={item.title} delay={400 + index * 100}>
+                    <div className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 group transition-all duration-300 hover:scale-105">
+                      <div className="w-10 h-10 bg-gradient-to-r from-primary to-secondary rounded-xl flex items-center justify-center text-white shadow-lg group-hover:shadow-xl transition-shadow duration-300">
+                        {item.icon}
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
+
+              <ScaleIn delay={700}>
+                <Button size="lg" className=" text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                  <Link href="/services" className="flex items-center gap-2">
+                    Discover Our Services
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
+              </ScaleIn>
             </SlideInRight>
           </div>
         </div>
       </section>
 
-      {/* Motto Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScaleIn className="max-w-4xl mx-auto space-y-8">
-            <div className="relative">
-              <Image
-                src="/financial-security-growth-abstract-icons-shield-up.jpg"
-                alt="Financial security and growth"
-                width={300}
-                height={200}
-                className="mx-auto rounded-lg"
-              />
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground text-balance">
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Secure Today, Prosper Tomorrow
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Our motto reflects our commitment to building financial security for today while creating sustainable
-              prosperity for the future. We believe in empowering our clients with the tools, knowledge, and support
-              they need to achieve lasting financial success.
-            </p>
-            <Button asChild size="lg" className="bg-brand-gradient hover:opacity-90 text-white">
-              <Link href="/services">
-                Explore How We Can Help <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </ScaleIn>
-        </div>
-      </section>
-
       {/* Services Overview Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <FadeIn className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">
+            <h2 className="text-4xl font-bold text-gray-900 text-balance">
               Comprehensive Financial Services
             </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              We offer a variety of financial services tailored to meet the needs of businesses and individuals, helping
-              you achieve your financial goals with confidence.
+            <p className="text-xl text-gray-600 text-pretty max-w-3xl mx-auto">
+              We offer a variety of financial services tailored to meet the
+              needs of businesses and individuals, helping you achieve your
+              financial goals with confidence.
             </p>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FadeIn delay={100}>
-              <Card className="group hover:shadow-lg transition-all duration-300 border-border h-full">
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <TrendingUp className="h-6 w-6 text-primary" />
+            {[
+              {
+                icon: <TrendingUp className="h-8 w-8" />,
+                title: "Business & Personal Loans",
+                description: "Flexible loan solutions designed to support your business growth or personal financial needs with competitive rates and terms.",
+                image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=200&fit=crop&crop=center",
+                stats: { rate: "8.5%", amount: "₦500M" }
+              },
+              {
+                icon: <Users className="h-8 w-8" />,
+                title: "Group Loans",
+                description: "Collaborative financing solutions for groups and cooperatives, enabling collective financial growth and shared prosperity.",
+                image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=200&fit=crop&crop=center",
+                stats: { rate: "7.5%", amount: "Group" }
+              },
+              {
+                icon: <Shield className="h-8 w-8" />,
+                title: "LPO Finance & Syndication",
+                description: "Specialized financing for Local Purchase Orders and loan syndication services to support large-scale business operations.",
+                image: "/calculator.jpg",
+                stats: { rate: "90%", amount: "LPO Value" }
+              },
+            ].map((service, index) => (
+              <FadeIn key={service.title} delay={100 * (index + 1)}>
+                <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:scale-105">
+                  <div className="relative">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    <div className="absolute top-4 right-4">
+                      <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-primary shadow-lg">
+                        {service.icon}
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">Business & Personal Loans</h3>
-                  <p className="text-muted-foreground">
-                    Flexible loan solutions designed to support your business growth or personal financial needs with
-                    competitive rates and terms.
-                  </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
-
-            <FadeIn delay={200}>
-              <Card className="group hover:shadow-lg transition-all duration-300 border-border h-full">
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Users className="h-6 w-6 text-primary" />
+                  
+                  <div className="p-6 space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {service.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+                      {Object.entries(service.stats).map(([key, value]) => (
+                        <div key={key} className="text-center">
+                          <div className="text-lg font-bold text-primary">{value}</div>
+                          <div className="text-xs text-gray-500 capitalize">{key}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">Group Loans</h3>
-                  <p className="text-muted-foreground">
-                    Collaborative financing solutions for groups and cooperatives, enabling collective financial growth
-                    and shared prosperity.
-                  </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
-
-            <FadeIn delay={300}>
-              <Card className="group hover:shadow-lg transition-all duration-300 border-border h-full">
-                <CardContent className="p-6 space-y-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <Shield className="h-6 w-6 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">LPO Finance & Syndication</h3>
-                  <p className="text-muted-foreground">
-                    Specialized financing for Local Purchase Orders and loan syndication services to support large-scale
-                    business operations.
-                  </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
+                </div>
+              </FadeIn>
+            ))}
           </div>
 
           <FadeIn delay={400} className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
+            <Button asChild size="lg" variant="outline" className="hover:bg-primary hover:text-white transition-all duration-300">
               <Link href="/services">
                 View All Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -216,63 +252,108 @@ export default function HomePage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-secondary/15 rounded-full blur-lg"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <FadeIn className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">Trusted Partnerships</h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              We proudly partner with leading financial organizations to offer comprehensive services and ensure the
-              highest standards of financial excellence.
+            <h2 className="text-4xl font-bold text-gray-900 text-balance">
+              Trusted Partnerships
+            </h2>
+            <p className="text-xl text-gray-600 text-pretty max-w-3xl mx-auto">
+              We proudly partner with leading financial organizations to offer
+              comprehensive services and ensure the highest standards of
+              financial excellence.
             </p>
           </FadeIn>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <ScaleIn delay={100}>
-              <Card className="text-center p-8 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <Shield className="h-8 w-8 text-primary" />
+            {[
+              {
+                title: "CRC Credit Bureau",
+                description: "Strategic partnership for comprehensive credit reporting and risk assessment services.",
+                icon: <Shield className="h-12 w-12" />,
+                image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=200&fit=crop&crop=center",
+                color: "from-blue-500 to-blue-600"
+              },
+              {
+                title: "First Central Credit Bureau",
+                description: "Collaboration for enhanced credit information services and financial data analytics.",
+                icon: <TrendingUp className="h-12 w-12" />,
+                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
+                color: "from-purple-500 to-purple-600"
+              },
+              {
+                title: "Credit Registry",
+                description: "Partnership for comprehensive credit registry services and financial inclusion initiatives.",
+                icon: <Users className="h-12 w-12" />,
+                image: "https://images.unsplash.com/photo-1554224154-26032fced8bd?w=400&h=200&fit=crop&crop=center",
+                color: "from-green-500 to-green-600"
+              },
+            ].map((partner, index) => (
+              <ScaleIn key={partner.title} delay={100 * (index + 1)}>
+                <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:scale-105">
+                  <div className="relative">
+                    <img
+                      src={partner.image}
+                      alt={partner.title}
+                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute top-4 right-4">
+                      <div className={`w-16 h-16 bg-gradient-to-r ${partner.color} rounded-2xl flex items-center justify-center text-white shadow-lg`}>
+                        {partner.icon}
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">CRC Credit Bureau</h3>
-                  <p className="text-muted-foreground">
-                    Strategic partnership for comprehensive credit reporting and risk assessment services.
-                  </p>
-                </CardContent>
-              </Card>
-            </ScaleIn>
-
-            <ScaleIn delay={200}>
-              <Card className="text-center p-8 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <TrendingUp className="h-8 w-8 text-primary" />
+                  
+                  <div className="p-6 space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">
+                      {partner.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {partner.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">First Central Credit Bureau</h3>
-                  <p className="text-muted-foreground">
-                    Collaboration for enhanced credit information services and financial data analytics.
-                  </p>
-                </CardContent>
-              </Card>
-            </ScaleIn>
-
-            <ScaleIn delay={300}>
-              <Card className="text-center p-8 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-4">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                    <Users className="h-8 w-8 text-primary" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground">Credit Registry</h3>
-                  <p className="text-muted-foreground">
-                    Partnership for comprehensive credit registry services and financial inclusion initiatives.
-                  </p>
-                </CardContent>
-              </Card>
-            </ScaleIn>
+                </div>
+              </ScaleIn>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8  relative overflow-hidden">
+        {/* <div className="absolute inset-0 bg-black/10"></div> */}
+        {/* <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div> */}
+        {/* <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div> */}
+        
+        <div className="relative max-w-4xl mx-auto text-center">
+          <FadeIn>
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Financial Future?</h2>
+            <p className="text-xl text-blue-100 mb-12 leading-relaxed">
+              Our financial experts are ready to help you find the perfect solution for your business needs.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
+                <Link href="/contact" className="flex items-center gap-2">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300">
+                <Link href="/services">
+                  Explore Services
+                </Link>
+              </button>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
       <Footer />
     </div>
-  )
+  );
 }

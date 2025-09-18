@@ -1,279 +1,496 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
-import { Shield, Eye, Target, Users, Award, Lock, FileCheck, AlertTriangle } from "lucide-react"
-import Link from "next/link"
-import Image from "next/image"
-import { FadeIn, SlideInLeft, SlideInRight, ScaleIn } from "@/components/animations"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Navigation } from "@/components/navigation";
+import { Footer } from "@/components/footer";
+import {
+  Shield,
+  Eye,
+  Target,
+  Users,
+  Award,
+  Lock,
+  FileCheck,
+  AlertTriangle,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  MapPin,
+  Mail,
+  Phone,
+  Briefcase,
+  GraduationCap,
+  TrendingUp,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  FadeIn,
+  SlideInLeft,
+  SlideInRight,
+  ScaleIn,
+} from "@/components/animations";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/5 to-secondary/5 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <SlideInLeft className="space-y-6">
-              <h1 className="text-4xl lg:text-5xl font-bold text-foreground text-balance">
+      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
+        <div className="absolute top-10 right-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl animate-bounce"></div>
+        
+        <div className="relative max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <FadeIn className="text-center lg:text-left">
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight">
                 About{" "}
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   FTA Financial Company Ltd
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground text-pretty">
+              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 At FTA Financial Company Ltd, we believe that strong financial partnerships build a brighter future. Our
                 goal is to offer clients tailored financial solutions that meet their unique needs and help them achieve
                 long-term success.
               </p>
-            </SlideInLeft>
-            <SlideInRight delay={200} className="relative">
-              <Image
-                src="/professional-team-trust-expertise-financial-servi.jpg"
-                alt="Professional team representing trust and expertise"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-2xl"
-              />
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+                <Button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-6 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300">
+                  <Link href="/services" className="flex items-center gap-3">
+                    Our Services
+                    <ArrowRight className="w-5 h-5" />
+                  </Link>
+                </Button>
+                <Button variant="outline" className="border-2 border-blue-600 text-blue-600 px-10 py-6 rounded-xl font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all duration-300">
+                  <Link href="/contact">
+                    Contact Us
+                  </Link>
+                </Button>
+              </div>
+            </FadeIn>
+            
+            <SlideInRight delay={200}>
+              <div className="relative group">
+                <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img
+                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=700&h=500&fit=crop&crop=center"
+                  alt="Professional team representing trust and expertise"
+                  className="relative rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500 w-full h-[450px] object-cover"
+                />
+              </div>
             </SlideInRight>
           </div>
         </div>
       </section>
 
       {/* Vision and Mission Section */}
-      <section className="py-20">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <FadeIn delay={100}>
-              <Card className="p-8 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                      <Eye className="h-6 w-6 text-primary" />
+          <FadeIn className="text-center space-y-6 mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Vision & Mission</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our vision and mission guide everything we do, ensuring we deliver exceptional value to our clients.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <SlideInLeft delay={100}>
+              <div className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=300&fit=crop&crop=center"
+                    alt="Vision - Future perspective"
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-6 right-6">
+                    <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-blue-600 shadow-lg">
+                      <Eye className="h-8 w-8" />
                     </div>
-                    <h2 className="text-2xl font-bold text-foreground">Our Vision</h2>
                   </div>
-                  <p className="text-muted-foreground text-pretty leading-relaxed">
+                  <div className="absolute bottom-6 left-6">
+                    <h3 className="text-3xl font-bold text-white mb-2">Our Vision</h3>
+                  </div>
+                </div>
+                
+                <div className="p-8 space-y-4">
+                  <p className="text-gray-600 leading-relaxed text-lg">
                     To be the leading financial services provider in Nigeria and across Africa, recognized for our
                     innovative solutions, exceptional customer service, and unwavering commitment to empowering
                     individuals and businesses to achieve financial independence and sustainable growth.
                   </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
+                </div>
+              </div>
+            </SlideInLeft>
 
-            <FadeIn delay={200}>
-              <Card className="p-8 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-6">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center">
-                      <Target className="h-6 w-6 text-secondary" />
+            <SlideInRight delay={200}>
+              <div className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=600&h=300&fit=crop&crop=center"
+                    alt="Mission - Our purpose"
+                    className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-6 right-6">
+                    <div className="w-16 h-16 bg-white/90 backdrop-blur-sm rounded-xl flex items-center justify-center text-purple-600 shadow-lg">
+                      <Target className="h-8 w-8" />
                     </div>
-                    <h2 className="text-2xl font-bold text-foreground">Our Mission</h2>
                   </div>
-                  <p className="text-muted-foreground text-pretty leading-relaxed">
+                  <div className="absolute bottom-6 left-6">
+                    <h3 className="text-3xl font-bold text-white mb-2">Our Mission</h3>
+                  </div>
+                </div>
+                
+                <div className="p-8 space-y-4">
+                  <p className="text-gray-600 leading-relaxed text-lg">
                     To provide comprehensive, accessible, and innovative financial solutions that empower our clients to
                     secure their financial future. We are committed to building lasting relationships based on trust,
                     transparency, and mutual success while contributing to the economic development of our communities.
                   </p>
-                </CardContent>
-              </Card>
-            </FadeIn>
-          </div>
-
-          <ScaleIn delay={300} className="mt-12 text-center">
-            <Image
-              src="/inspirational-growth-ambition-city-skyline-upward-a.jpg"
-              alt="Inspirational image reflecting ambition and growth"
-              width={800}
-              height={300}
-              className="mx-auto rounded-lg shadow-lg"
-            />
-          </ScaleIn>
-        </div>
-      </section>
-
-      {/* Management Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">Leadership Team</h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-3xl mx-auto">
-              Our experienced leadership team brings decades of combined expertise in financial services, risk
-              management, and business development.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ScaleIn delay={100}>
-              <Card className="text-center p-6 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-4">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mx-auto">
-                    <Users className="h-12 w-12 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">Chief Executive Officer</h3>
-                    <p className="text-muted-foreground mt-2">
-                      Strategic leadership and vision for company growth, with over 15 years of experience in financial
-                      services and business development.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScaleIn>
-
-            <ScaleIn delay={200}>
-              <Card className="text-center p-6 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-4">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mx-auto">
-                    <Shield className="h-12 w-12 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">Chief Risk Officer</h3>
-                    <p className="text-muted-foreground mt-2">
-                      Oversees risk management strategies and compliance frameworks, ensuring the highest standards of
-                      financial security and regulatory adherence.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScaleIn>
-
-            <ScaleIn delay={300}>
-              <Card className="text-center p-6 border-border h-full hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-4">
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center mx-auto">
-                    <Award className="h-12 w-12 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-foreground">Chief Financial Officer</h3>
-                    <p className="text-muted-foreground mt-2">
-                      Manages financial operations and strategic planning, with expertise in corporate finance and
-                      investment management across multiple markets.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScaleIn>
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance and Data Protection Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeIn className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">
-              Compliance, Data Protection & Risk Management
-            </h2>
-            <p className="text-xl text-muted-foreground text-pretty max-w-4xl mx-auto">
-              We maintain the highest standards of regulatory compliance, data protection, and risk management to ensure
-              the security and privacy of our clients' information and investments.
-            </p>
-          </FadeIn>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="space-y-8">
-              <SlideInLeft delay={100}>
-                <Card className="p-6 border-border hover:shadow-lg transition-all duration-300">
-                  <CardContent className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <Lock className="h-6 w-6 text-primary" />
-                      <h3 className="text-xl font-semibold text-foreground">GDPR Compliance</h3>
-                    </div>
-                    <p className="text-muted-foreground">
-                      Full compliance with General Data Protection Regulation (GDPR) standards, ensuring the highest
-                      level of data privacy and protection for all client information and transactions.
-                    </p>
-                  </CardContent>
-                </Card>
-              </SlideInLeft>
-
-              <SlideInLeft delay={200}>
-                <Card className="p-6 border-border hover:shadow-lg transition-all duration-300">
-                  <CardContent className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <FileCheck className="h-6 w-6 text-primary" />
-                      <h3 className="text-xl font-semibold text-foreground">KYC & AML Procedures</h3>
-                    </div>
-                    <p className="text-muted-foreground">
-                      Comprehensive Know Your Customer (KYC) and Anti-Money Laundering (AML) procedures in accordance
-                      with international standards and local regulatory requirements.
-                    </p>
-                  </CardContent>
-                </Card>
-              </SlideInLeft>
-
-              <SlideInLeft delay={300}>
-                <Card className="p-6 border-border hover:shadow-lg transition-all duration-300">
-                  <CardContent className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <AlertTriangle className="h-6 w-6 text-primary" />
-                      <h3 className="text-xl font-semibold text-foreground">Risk Assessment</h3>
-                    </div>
-                    <p className="text-muted-foreground">
-                      Advanced risk assessment frameworks and continuous monitoring systems to identify, evaluate, and
-                      mitigate potential financial and operational risks.
-                    </p>
-                  </CardContent>
-                </Card>
-              </SlideInLeft>
-            </div>
-
-            <SlideInRight delay={200} className="space-y-6">
-              <Image
-                src="/security-compliance-legal-data-protection-icons-g.jpg"
-                alt="Security, compliance, and data protection icons"
-                width={500}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-
-              <Card className="p-6 bg-primary/5 border-primary/20 hover:shadow-lg transition-all duration-300">
-                <CardContent className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <Shield className="h-6 w-6 text-primary" />
-                    <h3 className="text-xl font-semibold text-foreground">Security Commitment</h3>
-                  </div>
-                  <p className="text-muted-foreground">
-                    Our commitment to security extends beyond compliance. We employ state-of-the-art encryption,
-                    multi-factor authentication, and regular security audits to protect your financial data and ensure
-                    the integrity of all transactions.
-                  </p>
-                  <div className="pt-4">
-                    <Button asChild className="bg-brand-gradient hover:opacity-90 text-white">
-                      <Link href="/contact">Learn More About Our Security</Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </SlideInRight>
           </div>
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-secondary/10">
-        <ScaleIn className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground text-balance">Ready to Partner with Us?</h2>
-          <p className="text-xl text-muted-foreground text-pretty">
-            Join thousands of satisfied clients who trust FTA Financial Company Ltd for their financial needs. Let's
-            build your financial future together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-brand-gradient hover:opacity-90 text-white">
-              <Link href="/services">Explore Our Services</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/contact">Contact Us Today</Link>
-            </Button>
+      {/* Leadership Team Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center space-y-6 mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Leadership Team</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              Meet our distinguished leadership team with decades of combined expertise in financial services, banking, 
+              risk management, and strategic business development.
+            </p>
+          </FadeIn>
+
+          {/* Executive Leadership */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+            <ScaleIn delay={100}>
+              <div className="group bg-white rounded-3xl shadow-xl transition-all duration-500 overflow-hidden">
+                <div className="relative">
+                  <img
+                    src="/mayowa.jpg"
+                    alt="Dr. Mayowa Adeyemo"
+                    className="w-full h-80 object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Dr. Mayowa Adeyemo</h3>
+                    <p className="text-blue-200 font-semibold text-lg">Managing Director/CEO</p>
+                  </div>
+                </div>
+                
+                <div className="p-8 space-y-6">
+                  <p className="text-gray-600 leading-relaxed">
+                    Visionary leader with over 20 years in banking and financial management. Former Regional Head at 
+                    Polaris Bank Ltd, expert in strategic partnerships, SME development, and financial inclusion.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-gray-700">
+                      <GraduationCap className="w-4 h-4 text-blue-600" />
+                      <span>PhD Management Science, MBA, BSc Economics</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm text-gray-700">
+                      <Briefcase className="w-4 h-4 text-blue-600" />
+                      <span>Associate Member: CIBN, NIM, CIFCN</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm text-gray-700">
+                      <Award className="w-4 h-4 text-blue-600" />
+                      <span>Lagos Business School Alumni (SMP 82)</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScaleIn>
+
+            <ScaleIn delay={200}>
+              <div className="group bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=400&fit=crop&crop=center"
+                    alt="Olusola Arowojolu"
+                    className="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                  <div className="absolute top-6 right-6">
+                    <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                      <Award className="h-10 w-10" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-6 left-6 right-6 text-white">
+                    <h3 className="text-2xl font-bold mb-2">Olusola Arowojolu</h3>
+                    <p className="text-purple-200 font-semibold text-lg">Chairman</p>
+                  </div>
+                </div>
+                
+                <div className="p-8 space-y-6">
+                  <p className="text-gray-600 leading-relaxed">
+                    Seasoned finance transformation leader with 20+ years global experience in IFRS implementation. 
+                    Former consultant for FTSE 100 companies including Fujitsu, BT Group, and Vodafone.
+                  </p>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-sm text-gray-700">
+                      <GraduationCap className="w-4 h-4 text-purple-600" />
+                      <span>MSc Professional Accountancy (UCL), ACCA Fellow</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm text-gray-700">
+                      <Briefcase className="w-4 h-4 text-purple-600" />
+                      <span>ICAN Qualified, Oxford Brookes BSc</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-sm text-gray-700">
+                      <TrendingUp className="w-4 h-4 text-purple-600" />
+                      <span>Enterprise Systems & IFRS Expert</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScaleIn>
           </div>
-        </ScaleIn>
+
+          {/* Advisory Board and Executive Directors */}
+          <FadeIn delay={300}>
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Advisory Board & Executive Team</h3>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our advisory board and executive team provide strategic guidance and operational excellence.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <SlideInLeft delay={100}>
+                <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105">
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop&crop=center"
+                      alt="Fayemiwo Ojo Omobola"
+                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute top-4 right-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <Shield className="h-6 w-6" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <h4 className="font-bold text-lg">Fayemiwo Ojo Omobola</h4>
+                      <p className="text-green-200 text-sm">Member, Advisory Board</p>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 space-y-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Seasoned financial services executive with over 20 years at Polaris Bank Ltd. Expert in 
+                      operational excellence, business development, and regulatory compliance.
+                    </p>
+                    <div className="pt-2 border-t border-gray-100">
+                      <p className="text-xs text-green-600 font-medium">MBA, BSc Business Administration</p>
+                    </div>
+                  </div>
+                </div>
+              </SlideInLeft>
+
+              <ScaleIn delay={200}>
+                <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105">
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=250&fit=crop&crop=center"
+                      alt="Philadelphia Samuel"
+                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute top-4 right-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <Target className="h-6 w-6" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <h4 className="font-bold text-lg">Philadelphia Samuel</h4>
+                      <p className="text-indigo-200 text-sm">Executive Director</p>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 space-y-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Strategic executive with extensive experience in financial operations and corporate governance, 
+                      driving organizational growth and operational excellence.
+                    </p>
+                    <div className="pt-2 border-t border-gray-100">
+                      <p className="text-xs text-indigo-600 font-medium">Professional Certifications in Finance</p>
+                    </div>
+                  </div>
+                </div>
+              </ScaleIn>
+
+              <SlideInRight delay={300}>
+                <div className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105">
+                  <div className="relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=250&fit=crop&crop=center"
+                      alt="Tunrayo Fasakin"
+                      className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute top-4 right-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+                        <Eye className="h-6 w-6" />
+                      </div>
+                    </div>
+                    <div className="absolute bottom-4 left-4 right-4 text-white">
+                      <h4 className="font-bold text-lg">Tunrayo Fasakin</h4>
+                      <p className="text-pink-200 text-sm">Member, Advisory Board</p>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6 space-y-4">
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      Advisory board member bringing valuable insights in strategic planning and business development 
+                      to guide company growth and market expansion.
+                    </p>
+                    <div className="pt-2 border-t border-gray-100">
+                      <p className="text-xs text-pink-600 font-medium">Strategic Business Expertise</p>
+                    </div>
+                  </div>
+                </div>
+              </SlideInRight>
+            </div>
+          </FadeIn>
+        </div>
       </section>
 
+      {/* Company Information Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <FadeIn className="text-center space-y-6 mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">Contact Information</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Get in touch with FTA Financial Company Ltd for all your financial service needs.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <SlideInLeft delay={100}>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <MapPin className="w-10 h-10" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Address</h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  No. 1 Olugbesan Close, off Allen Avenue, Ikeja Lagos
+                </p>
+              </div>
+            </SlideInLeft>
+
+            <ScaleIn delay={200}>
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Mail className="w-10 h-10" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Email</h3>
+                <p className="text-gray-700 text-lg">ftafinancials@gmail.com</p>
+              </div>
+            </ScaleIn>
+
+            <SlideInRight delay={300}>
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 text-center group hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-white mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Phone className="w-10 h-10" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Phone</h3>
+                <p className="text-gray-700 text-lg">07070650444</p>
+              </div>
+            </SlideInRight>
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance and Data Protection Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl animate-float"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 bg-purple-200/20 rounded-full blur-lg animate-float-delayed"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <FadeIn className="text-center space-y-6 mb-20">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+              Compliance, Data Protection & Risk Management
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              We maintain the highest standards of regulatory compliance, data protection, and risk management to ensure
+              the security and privacy of our clients' information and investments.
+            </p>
+          </FadeIn>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              {[
+                {
+                  icon: <Lock className="h-8 w-16" />,
+                  title: "GDPR Compliance",
+                  description: "Full compliance with General Data Protection Regulation (GDPR) standards, ensuring the highest level of data privacy and protection for all client information and transactions.",
+                  color: "from-blue-500 to-blue-600"
+                },
+                {
+                  icon: <FileCheck className="h-8 w-16" />,
+                  title: "KYC & AML Procedures",
+                  description: "Comprehensive Know Your Customer (KYC) and Anti-Money Laundering (AML) procedures in accordance with international standards and local regulatory requirements.",
+                  color: "from-purple-500 to-purple-600"
+                },
+                {
+                  icon: <AlertTriangle className="h-8 w-16" />,
+                  title: "Risk Assessment",
+                  description: "Advanced risk assessment frameworks and continuous monitoring systems to identify, evaluate, and mitigate potential financial and operational risks.",
+                  color: "from-green-500 to-green-600"
+                }
+              ].map((item, index) => (
+                <SlideInLeft key={item.title} delay={100 * (index + 1)}>
+                  <div className="flex items-start gap-6 p-8 rounded-3xl hover:bg-white/80 group transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center text-white shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
+                      {item.icon}
+                    </div>
+                    <div className="space-y-3">
+                      <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 leading-relaxed text-lg">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </SlideInLeft>
+              ))}
+            </div>
+
+            <SlideInRight delay={200}>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden group-hover:shadow-3xl transition-shadow duration-500">
+                  <img
+                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=500&fit=crop&crop=center"
+                    alt="Security, compliance, and data protection"
+                    className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-8 left-8 right-8">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6">
+                      <div className="flex items-center gap-4 mb-3">
+                        <Shield className="h-8 w-8 text-blue-600" />
+                        <h4 className="font-bold text-gray-900 text-xl">Security Commitment</h4>
+                      </div>
+                      <p className="text-gray-600">
+                        State-of-the-art encryption and multi-factor authentication
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SlideInRight>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
-  )
+  );
 }

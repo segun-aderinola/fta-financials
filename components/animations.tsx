@@ -1,123 +1,78 @@
 "use client"
 
-import type React from "react"
+import { motion, useInView } from "framer-motion"
+import { useRef } from "react"
 
-import { useEffect, useRef } from "react"
-
-// Intersection Observer hook for scroll animations
-export function useInView(threshold = 0.1) {
-  const ref = useRef<HTMLElement>(null)
-  const isInView = useRef(false)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !isInView.current) {
-          isInView.current = true
-          entry.target.classList.add("animate-in")
-        }
-      },
-      { threshold },
-    )
-
-    if (ref.current) {
-      observer.observe(ref.current)
-    }
-
-    return () => observer.disconnect()
-  }, [threshold])
-
-  return ref
-}
-
-// Fade in animation component
-export function FadeIn({
-  children,
-  delay = 0,
-  className = "",
-}: {
+interface AnimationProps {
   children: React.ReactNode
   delay?: number
   className?: string
-}) {
-  const ref = useInView()
+}
+
+export function FadeIn({ children, delay = 0, className = "" }: AnimationProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`opacity-0 translate-y-8 transition-all duration-700 ease-out ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, delay: delay / 1000 }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 
-// Slide in from left animation
-export function SlideInLeft({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode
-  delay?: number
-  className?: string
-}) {
-  const ref = useInView()
+export function SlideInLeft({ children, delay = 0, className = "" }: AnimationProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`opacity-0 -translate-x-8 transition-all duration-700 ease-out ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      initial={{ opacity: 0, x: -50 }}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+      transition={{ duration: 0.7, delay: delay / 1000, ease: "easeOut" }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 
-// Slide in from right animation
-export function SlideInRight({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode
-  delay?: number
-  className?: string
-}) {
-  const ref = useInView()
+export function SlideInRight({ children, delay = 0, className = "" }: AnimationProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-50px" })
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`opacity-0 translate-x-8 transition-all duration-700 ease-out ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      initial={{ opacity: 0, x: 50 }}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+      transition={{ duration: 0.7, delay: delay / 1000, ease: "easeOut" }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }
 
-// Scale in animation
-export function ScaleIn({
-  children,
-  delay = 0,
-  className = "",
-}: {
-  children: React.ReactNode
-  delay?: number
-  className?: string
-}) {
-  const ref = useInView()
+export function ScaleIn({ children, delay = 0, className = "" }: AnimationProps) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <div
+    <motion.div
       ref={ref}
-      className={`opacity-0 scale-95 transition-all duration-700 ease-out ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+      transition={{ duration: 0.6, delay: delay / 1000, ease: "backOut" }}
+      className={className}
     >
       {children}
-    </div>
+    </motion.div>
   )
 }

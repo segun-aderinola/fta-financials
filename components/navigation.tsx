@@ -36,7 +36,7 @@ export function Navigation() {
                 {item.label}
               </Link>
             ))}
-            <Button className="bg-brand-gradient hover:opacity-90 text-white">Get Started</Button>
+            {/* <Button className=" hover:opacity-90 text-white">Get Started</Button> */}
           </div>
 
           {/* Mobile menu button */}
@@ -62,7 +62,7 @@ export function Navigation() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <Button className="w-full bg-brand-gradient hover:opacity-90 text-white">Get Started</Button>
+                <Button className="w-full  hover:opacity-90 text-white">Get Started</Button>
               </div>
             </div>
           </div>

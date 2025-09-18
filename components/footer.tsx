@@ -95,7 +95,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-300 font-medium">Address</p>
-                  <p className="text-white">Ikeja, Lagos, Nigeria</p>
+                  <p className="text-white">No. 1 Olugbesan Close, off Allen Avenue, Ikeja Lagos</p>
                 </div>
               </div>
               
@@ -105,7 +105,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-gray-300 font-medium">Phone</p>
-                  <p className="text-white">+234 XXX XXX XXXX</p>
+                  <p className="text-white">07070650444</p>
                 </div>
               </div>
               
@@ -113,9 +113,9 @@ export function Footer() {
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <Mail className="w-5 h-5 text-white" />
                 </div>
-                <div>
+                 <div>
                   <p className="text-gray-300 font-medium">Email</p>
-                  <p className="text-white">info@ftafinancial.com</p>
+                  <p className="text-white">ftafinancials@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -164,7 +164,7 @@ export function Footer() {
             
             {/* Scroll to Top Button */}
             <button
-              // onClick={}
+              onClick={scrollToTop}
               className="group w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center hover:scale-110 hover:shadow-2xl transition-all duration-300"
               aria-label="Scroll to top"
             >
