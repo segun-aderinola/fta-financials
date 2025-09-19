@@ -49,61 +49,61 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Information */}
-            <div className="space-y-8">
+            <div className="space-y-6 lg:space-y-8">
               {/* Contact Details */}
               <SlideInRight delay={200}>
-                <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
+                <div className="group bg-white rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden">
                   <div className="relative">
                     <img
                       src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=200&fit=crop&crop=center"
                       alt="Professional office building"
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-40 sm:h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-4 left-6">
-                      <h2 className="text-2xl font-bold text-white">Contact Information</h2>
-                      <p className="text-blue-100">Multiple ways to reach our team</p>
+                    <div className="absolute bottom-3 sm:bottom-4 left-4 sm:left-6">
+                      <h2 className="text-xl sm:text-2xl font-bold text-white">Contact Information</h2>
+                      <p className="text-blue-100 text-sm sm:text-base">Multiple ways to reach our team</p>
                     </div>
                   </div>
                   
-                  <div className="p-6 space-y-6">
+                  <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                     {[
                       {
-                        icon: <MapPin className="h-5 w-5" />,
+                        icon: <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />,
                         title: "Office Address",
                         content: "No. 1 Olugbesan Close\noff Allen Avenue\nIkeja Lagos",
                         color: "bg-blue-100 text-blue-600"
                       },
                       {
-                        icon: <Phone className="h-5 w-5" />,
+                        icon: <Phone className="h-4 w-4 sm:h-5 sm:w-5" />,
                         title: "Phone Numbers",
                         content: "07070650444",
                         color: "bg-green-100 text-green-600"
                       },
                       {
-                        icon: <Mail className="h-5 w-5" />,
+                        icon: <Mail className="h-4 w-4 sm:h-5 sm:w-5" />,
                         title: "Email Address",
                         content: "ftafinancials@gmail.com",
                         color: "bg-purple-100 text-purple-600"
                       },
                       {
-                        icon: <Clock className="h-5 w-5" />,
+                        icon: <Clock className="h-4 w-4 sm:h-5 sm:w-5" />,
                         title: "Business Hours",
                         content: "Monday - Friday: 8:00 AM - 6:00 PM WAT\nSaturday: 9:00 AM - 2:00 PM WAT\nSunday: Closed",
                         color: "bg-orange-100 text-orange-600"
                       }
                     ].map((item, index) => (
-                      <div key={item.title} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-gray-50 group transition-all duration-300">
-                        <div className={`p-3 rounded-xl ${item.color} group-hover:scale-110 transition-transform duration-300`}>
+                      <div key={item.title} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl sm:rounded-2xl hover:bg-gray-50 group transition-all duration-300">
+                        <div className={`p-2 sm:p-3 rounded-lg sm:rounded-xl ${item.color} group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
                           {item.icon}
                         </div>
-                        <div>
-                          <h3 className="font-bold text-gray-900 mb-1">{item.title}</h3>
-                          <p className="text-gray-600 text-sm whitespace-pre-line leading-relaxed">
+                        <div className="min-w-0 flex-1">
+                          <h3 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">{item.title}</h3>
+                          <p className="text-gray-600 text-xs sm:text-sm whitespace-pre-line leading-relaxed break-words">
                             {item.content}
                           </p>
                         </div>
@@ -113,26 +113,72 @@ export default function ContactPage() {
                 </div>
               </SlideInRight>
 
-              
-            </div>
-                           {/* Quick Actions */}
+              {/* Quick Actions */}
               <FadeIn delay={400}>
-                <div className="bg-white rounded-3xl shadow-lg p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6">Quick Actions</h3>
-                  <div className="space-y-4">
+                <div className="bg-white rounded-2xl lg:rounded-3xl shadow-lg p-4 sm:p-6">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Quick Actions</h3>
+                  <div className="space-y-3 sm:space-y-4">
                     {[
                       { icon: <Calendar className="h-4 w-4" />, text: "Schedule a Consultation", color: "hover:bg-blue-50 hover:text-blue-600" },
                       { icon: <MessageSquare className="h-4 w-4" />, text: "Live Chat Support", color: "hover:bg-green-50 hover:text-green-600" },
                       { icon: <Users className="h-4 w-4" />, text: "Request a Callback", color: "hover:bg-purple-50 hover:text-purple-600" }
                     ].map((action, index) => (
-                      <button key={action.text} className={`w-full p-4 rounded-xl border border-gray-200 ${action.color} transition-all duration-300 flex items-center gap-3 font-medium`}>
+                      <button key={action.text} className={`w-full p-3 sm:p-4 rounded-lg sm:rounded-xl border border-gray-200 ${action.color} transition-all duration-300 flex items-center gap-3 font-medium text-sm sm:text-base`}>
                         {action.icon}
-                        {action.text}
+                        <span className="truncate">{action.text}</span>
                       </button>
                     ))}
                   </div>
                 </div>
               </FadeIn>
+            </div>
+
+            {/* Contact Form or Additional Content */}
+            <div className="space-y-6 lg:space-y-8">
+              <SlideInLeft delay={300}>
+                <div className="bg-white rounded-2xl lg:rounded-3xl shadow-lg p-4 sm:p-6 lg:p-8">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 sm:mb-6">Get In Touch</h3>
+                  <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
+                    Ready to discuss your financial needs? We're here to help you achieve your business goals with tailored financial solutions.
+                  </p>
+                  
+                  <div className="space-y-4 sm:space-y-6">
+                    {[
+                      {
+                        title: "Business Loans",
+                        description: "Flexible financing solutions for business growth and expansion",
+                        icon: <Briefcase className="h-5 w-5 sm:h-6 sm:w-6" />
+                      },
+                      {
+                        title: "Financial Advisory",
+                        description: "Expert guidance for strategic financial planning and investment",
+                        icon: <Shield className="h-5 w-5 sm:h-6 sm:w-6" />
+                      },
+                      {
+                        title: "Investment Services",
+                        description: "Comprehensive investment solutions tailored to your needs",
+                        icon: <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6" />
+                      }
+                    ].map((service, index) => (
+                      <div key={service.title} className="flex items-start gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-gray-100 hover:border-blue-200 hover:bg-blue-50/50 transition-all duration-300">
+                        <div className="text-blue-600 mt-1">
+                          {service.icon}
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">{service.title}</h4>
+                          <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{service.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <Button className="w-full mt-6 sm:mt-8 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 sm:py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
+                    Start Your Application
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </div>
+              </SlideInLeft>
+            </div>
           </div>
         </div>
       </section>
