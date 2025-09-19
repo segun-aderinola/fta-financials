@@ -57,16 +57,13 @@ export default function HomePage() {
                 </Button>
               </div>
             </SlideInLeft>
-            <SlideInRight delay={200} className="relative">
+            <SlideInRight delay={200}>
               <div className="relative group">
-                <div className="absolute -inset-4 rounded-3xl duration-500"></div>
-                <Image
+                <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img
                   src="/man-holding-phone-removebg-preview.png"
-                  alt="Professional financial consultation"
-                  width={600}
-                  height={500}
-                  className="relative rounded-3xl transition-transform duration-500"
-                  priority
+                  alt="Professional team representing trust and expertise"
+                  className="relative rounded-3xl group-hover:scale-105 transition-transform duration-500 w-full object-cover"
                 />
               </div>
             </SlideInRight>
@@ -288,7 +285,7 @@ export default function HomePage() {
                 title: "Credit Registry",
                 description: "Partnership for comprehensive credit registry services and financial inclusion initiatives.",
                 icon: <Users className="h-12 w-12" />,
-                image: "https://images.unsplash.com/photo-1554224154-26032fced8bd?w=400&h=200&fit=crop&crop=center",
+                image: "/",
                 color: "from-green-500 to-green-600"
               },
             ].map((partner, index) => (
@@ -322,37 +319,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8  relative overflow-hidden">
-        {/* <div className="absolute inset-0 bg-black/10"></div> */}
-        {/* <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div> */}
-        {/* <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div> */}
-        
-        <div className="relative max-w-4xl mx-auto text-center">
-          <FadeIn>
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Secure Your Financial Future?</h2>
-            <p className="text-xl text-blue-100 mb-12 leading-relaxed">
-              Our financial experts are ready to help you find the perfect solution for your business needs.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <button className="bg-white text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2">
-                <Link href="/contact" className="flex items-center gap-2">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300">
-                <Link href="/services">
-                  Explore Services
-                </Link>
-              </button>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );

@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import {
@@ -22,7 +21,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import {
   FadeIn,
   SlideInLeft,
@@ -36,7 +34,7 @@ export default function AboutPage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
+      <section className="relative px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
         <div className="absolute top-10 right-10 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 left-10 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl animate-bounce"></div>
         
@@ -74,9 +72,9 @@ export default function AboutPage() {
               <div className="relative group">
                 <div className="absolute -inset-6 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl blur-xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img
-                  src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=700&h=500&fit=crop&crop=center"
+                  src="/man-holding-phone-removebg-preview.png"
                   alt="Professional team representing trust and expertise"
-                  className="relative rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500 w-full h-[450px] object-cover"
+                  className="relative rounded-3xl group-hover:scale-105 transition-transform duration-500 w-full object-cover"
                 />
               </div>
             </SlideInRight>
