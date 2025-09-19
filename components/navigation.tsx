@@ -61,9 +61,9 @@ export function Navigation() {
                   {item.label}
                 </Link>
               ))}
-              <div className="px-3 py-2">
+              {/* <div className="px-3 py-2">
                 <Button className="w-full  hover:opacity-90 text-white">Get Started</Button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}
