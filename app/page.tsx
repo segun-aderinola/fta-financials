@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Navigation } from "@/components/navigation";
 import { Footer } from "@/components/footer";
 import {
@@ -7,7 +6,6 @@ import {
   Shield,
   TrendingUp,
   Users,
-  CheckCircle,
   Star,
   Award,
   Target,
@@ -28,7 +26,7 @@ export default function HomePage() {
 
       {/* Hero Section - Keep as is */}
       <section className="relative bg-gradient-to-br from-primary/5 to-secondary/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl pt-10 md:pt-2 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <SlideInLeft className="space-y-8">
               <h1 className="text-4xl lg:text-6xl font-bold text-foreground text-balance capitalize">
@@ -271,38 +269,32 @@ export default function HomePage() {
                 title: "CRC Credit Bureau",
                 description: "Strategic partnership for comprehensive credit reporting and risk assessment services.",
                 icon: <Shield className="h-12 w-12" />,
-                image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=400&h=200&fit=crop&crop=center",
+                image: "/crc_logo.jpeg",
                 color: "from-blue-500 to-blue-600"
               },
               {
                 title: "First Central Credit Bureau",
                 description: "Collaboration for enhanced credit information services and financial data analytics.",
                 icon: <TrendingUp className="h-12 w-12" />,
-                image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
+                image: "/first_central_credit.png",
                 color: "from-purple-500 to-purple-600"
               },
               {
                 title: "Credit Registry",
                 description: "Partnership for comprehensive credit registry services and financial inclusion initiatives.",
                 icon: <Users className="h-12 w-12" />,
-                image: "/",
+                image: "/credit_registry.png",
                 color: "from-green-500 to-green-600"
               },
             ].map((partner, index) => (
               <ScaleIn key={partner.title} delay={100 * (index + 1)}>
-                <div className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:scale-105">
+                <div className="group bg-white rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden">
                   <div className="relative">
                     <img
                       src={partner.image}
                       alt={partner.title}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-48 object-contain ransition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                    <div className="absolute top-4 right-4">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${partner.color} rounded-2xl flex items-center justify-center text-white shadow-lg`}>
-                        {partner.icon}
-                      </div>
-                    </div>
                   </div>
                   
                   <div className="p-6 space-y-4">
