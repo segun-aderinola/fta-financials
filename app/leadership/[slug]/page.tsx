@@ -137,7 +137,7 @@ const leadersData = {
       "Financial Regulation Expert"
     ]
   },
-    philadephia_samuel: {
+  philadephia_samuel: {
     name: "Philadelphia Samuel",
     position: "Executive Director",
     image: "/philadephia.jpeg",
@@ -152,6 +152,33 @@ const leadersData = {
     ],
     certifications: [
       "Professional Certifications in Finance",
+    ]
+  },
+  omogoke_desmond: {
+    name: "Omogoke Desmond",
+    position: "Advisory Board Member",
+    image: "/desmond_omogoke.png",
+    biography: [
+      "Omogoke Desmond, a seasoned professional with 25 years of experience in labor relations and human resources management, has joined FTA Financial Company Ltd as a member of the board in advisory capacity. With expertise in strategic leadership, policy development, and risk management, Omogoke brings a unique perspective to the financial services industry",
+      "As a Labor Relations expert in a US Government Agency, Omogoke developed strong skills in policy development, contract administration, and dispute resolution. He also provided guidance to senior leadership on labor relations matters and organizational change, leveraging their analytical and problem-solving abilities to inform decision-making.",
+      "With a Master of Science degree in Labor Relations & HR Management from the University of Maryland, Omogoke is well-equipped to drive business growth and improve client relationships at FTA Financial. His leadership experience and strategic thinking capabilities will be valuable assets to the company."
+    ],
+    education: [
+      "Master of Science in Labor Relations & HR Management - University of Maryland"
+    ],
+    experience: [
+      "Advisory Board Member - FTA Financial Company Ltd",
+      "Labor Relations Expert - US Government Agency (25+ years)",
+      "Senior Leadership Advisor - Labor Relations & Organizational Change",
+      "Policy Development & Contract Administration Specialist"
+    ],
+    certifications: [
+      "Strategic Leadership",
+      "Policy Development",
+      "Risk Management",
+      "Contract Administration",
+      "Dispute Resolution",
+      "Labor Relations Management"
     ]
   }
 }
