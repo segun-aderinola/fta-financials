@@ -27,7 +27,7 @@ export default function ServicesPage() {
       description:
         "Flexible financing solutions to fuel your business growth and expansion plans with competitive rates and quick approval.",
       features: [
-        "Competitive interest rates starting from 8.5%",
+        "Competitive interest rates",
         "Loan amounts from ₦1,000,000 to ₦500,000,000",
         "Quick approval process (24-48 hours)",
         "Flexible repayment terms up to 10 years",
@@ -37,7 +37,7 @@ export default function ServicesPage() {
         "Minimum 2 years in business, annual revenue of ₦10,000,000+",
       imageUrl:
         "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop&crop=center",
-      stats: { rate: "8.5%", amount: "₦500M", approval: "24hrs" },
+      stats: { rate: "Competitive", amount: "₦500M", approval: "24hrs" },
     },
     {
       icon: <Users className="h-12 w-12" />,
@@ -54,7 +54,7 @@ export default function ServicesPage() {
       requirements: "Stable income, good credit history, valid identification",
       imageUrl:
         "https://images.unsplash.com/photo-1556740758-90de374c12ad?w=600&h=400&fit=crop&crop=center",
-      stats: { rate: "9.5%", amount: "₦10M", approval: "24hrs" },
+      stats: { rate: "Competitive", amount: "₦10M", approval: "24hrs" },
     },
     {
       icon: <Users className="h-12 w-12" />,
@@ -72,7 +72,7 @@ export default function ServicesPage() {
         "Registered group/cooperative, group agreement, meeting attendance",
       imageUrl:
         "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop&crop=center",
-      stats: { rate: "7.5%", amount: "Group", approval: "Fast" },
+      stats: { rate: "Competitive", amount: "Group", approval: "Fast" },
     },
     {
       icon: <FileText className="h-12 w-12" />,
@@ -80,7 +80,6 @@ export default function ServicesPage() {
       description:
         "Local Purchase Order financing to help you fulfill contracts and orders without cash flow constraints.",
       features: [
-        "Finance up to 90% of LPO value",
         "Quick processing within 48 hours",
         "Competitive financing rates",
         "Direct payment to suppliers",
@@ -90,7 +89,7 @@ export default function ServicesPage() {
         "Valid LPO from recognized organization, business registration, supplier agreements",
       imageUrl:
         "/finance.jpg",
-      stats: { rate: "90%", amount: "LPO Value", approval: "48hrs" },
+      stats: { rate: "Competitive", amount: "LPO Value", approval: "48hrs" },
     },
     {
       icon: <TrendingUp className="h-12 w-12" />,
@@ -108,7 +107,7 @@ export default function ServicesPage() {
         "Established business, major project/expansion plan, financial statements, collateral",
       imageUrl:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&crop=center",
-      stats: { rate: "Large", amount: "₦100M+", approval: "Expert" },
+      stats: { rate: "Competitive", amount: "₦100M+", approval: "Expert" },
     },
     {
       icon: <CreditCard className="h-12 w-12" />,
@@ -116,7 +115,6 @@ export default function ServicesPage() {
       description:
         "Convert your outstanding invoices into immediate cash flow for operational needs with competitive advance rates.",
       features: [
-        "Advance rates up to 85% of invoice value",
         "Same-day funding available",
         "Credit protection services",
         "Collections management",
@@ -126,7 +124,7 @@ export default function ServicesPage() {
         "B2B invoices, creditworthy customers, minimum monthly invoicing volume",
       imageUrl:
         "/finance.jpg",
-      stats: { rate: "85%", amount: "Same Day", approval: "Instant" },
+      stats: { rate: "Competitive", amount: "Same Day", approval: "Instant" },
     },
   ];
 

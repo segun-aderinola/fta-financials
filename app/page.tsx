@@ -182,21 +182,21 @@ export default function HomePage() {
                 title: "Business & Personal Loans",
                 description: "Flexible loan solutions designed to support your business growth or personal financial needs with competitive rates and terms.",
                 image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=200&fit=crop&crop=center",
-                stats: { rate: "8.5%", amount: "₦500M" }
+                stats: { rate: "Competitive", amount: "₦500M" }
               },
               {
                 icon: <Users className="h-8 w-8" />,
                 title: "Group Loans",
                 description: "Collaborative financing solutions for groups and cooperatives, enabling collective financial growth and shared prosperity.",
                 image: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=200&fit=crop&crop=center",
-                stats: { rate: "7.5%", amount: "Group" }
+                stats: { rate: "Competitive", amount: "Group" }
               },
               {
                 icon: <Shield className="h-8 w-8" />,
                 title: "LPO Finance & Syndication",
                 description: "Specialized financing for Local Purchase Orders and loan syndication services to support large-scale business operations.",
                 image: "/calculator.jpg",
-                stats: { rate: "90%", amount: "LPO Value" }
+                stats: { rate: "Competitive", amount: "LPO Value" }
               },
             ].map((service, index) => (
               <FadeIn key={service.title} delay={100 * (index + 1)}>
@@ -226,8 +226,8 @@ export default function HomePage() {
                     <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
                       {Object.entries(service.stats).map(([key, value]) => (
                         <div key={key} className="text-center">
-                          <div className="text-lg font-bold text-primary">{value}</div>
-                          <div className="text-xs text-gray-500 capitalize">{key}</div>
+                          <div className="text-lg font-bold text-primary whitespace-nowrap">{value}</div>
+                          <div className="text-xs text-gray-500 capitalize whitespace-nowrap">{key}</div>
                         </div>
                       ))}
                     </div>

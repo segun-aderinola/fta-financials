@@ -37,11 +37,11 @@ const leadersData = {
     ]
   },
   olusola_arowojolu: {
-    name: "Olusola Arowojolu",
+    name: "Mr. Olusola Arowojolu",
     position: "Chairman",
     image: "/olushola.jpeg",
     biography: [
-      "Olusola Arowojolu is a seasoned finance transformation leader and a qualified accountant with over 20 years of global experience in IFRS implementation, enterprise systems architecture, and financial systems integration. He combines deep technical expertise with strategic insight, having successfully led IFRS compliance programs across various sectors, including finance, telecommunications, retail, insurance, and technology.",
+      "Mr. Olusola Arowojolu is a seasoned finance transformation leader and a qualified accountant with over 20 years of global experience in IFRS implementation, enterprise systems architecture, and financial systems integration. He combines deep technical expertise with strategic insight, having successfully led IFRS compliance programs across various sectors, including finance, telecommunications, retail, insurance, and technology.",
       "With a proven track record in managing multi-million-dollar programs for FTSE 100 and Fortune 500 companies, Olusola delivers strategic value through system implementations, IFRS transitions, and financial process optimisation. He has demonstrated expertise in developing scalable financial models, optimising systems architecture, and driving comprehensive digital finance transformation.",
       "His leadership has influenced enterprise-wide implementations at multinational organisations, including Fujitsu, DXC Technology, Tesco, BT Group, Vodafone, Cisco, ARM, Admiral Group, and CVC Capital Partners, where he worked as a consultant.",
       "Recognised for his ability to bridge finance and technology, Olusola effectively translates complex regulatory requirements into scalable, compliant solutions. His strategic mindset and hands-on approach make him a trusted partner in driving enterprise-wide transformation."
@@ -63,11 +63,11 @@ const leadersData = {
     ]
   },
   fayemiwo_ojo_omobola: {
-    name: "Fayemiwo Ojo Omobola",
+    name: "Mr. Fayemiwo Ojo Omobola",
     position: "Advisory Board Member",
     image: "/fayemiwo.png",
     biography: [
-      "Fayemiwo Ojo Omobola is a seasoned financial services executive and currently a member of the Advisory Board at FTA Financial Company Ltd, bringing over two decades of leadership experience in banking, corporate governance, and strategic business development. His career, rooted in operational excellence, business development and regulatory compliance, spans key roles at Polaris Bank Ltd until his retirement in August 2025.",
+      "Mr. Fayemiwo Ojo Omobola is a seasoned financial services executive and currently a member of the Advisory Board at FTA Financial Company Ltd, bringing over two decades of leadership experience in banking, corporate governance, and strategic business development. His career, rooted in operational excellence, business development and regulatory compliance, spans key roles at Polaris Bank Ltd until his retirement in August 2025.",
       "With a strong academic foundation—including a BSc in Business Administration from the University of Ado-Ekiti and an MBA from the Federal University of Technology, Akure—Fayemiwo has consistently demonstrated a commitment to professional growth and institutional impact. His tenure at Polaris Bank seen him lead high-performing teams, manage multi-billion-naira portfolios, and drive branch expansion through innovative customer engagement and asset management strategies.",
       "As a member of the board of Director at FTA Financial Company Ltd, Fayemiwo contributes deep industry insight, risk oversight, and strategic direction to board-level decisions. His governance acumen is reinforced by professional affiliations with the Chartered Institute of Bankers of Nigeria, the Nigerian Institute of Management, and the Chartered Institute of Finance and Control of Nigeria.",
       "He is widely respected for his ethical leadership, ability to navigate complex regulatory environments, and dedication to financial inclusion and SME empowerment. His extensive training in credit analysis, risk infrastructure, and project management positions him as a forward-thinking leader capable of guiding financial institutions through dynamic market conditions."
@@ -92,7 +92,7 @@ const leadersData = {
     position: "Advisory Board Member",
     image: "/tunrayo.jpeg",
     biography: [
-      "Motunrayo Fasakin is a highly accomplished Registered Nurse and healthcare strategist with over eighteen years of clinical and case management experience, complemented by a strong and growing proficiency in finance and financial management. Her career reflects a rare blend of compassionate patient care and analytical financial insight—positioning her as a forward-thinking leader in the evolving intersection of healthcare delivery and fiscal responsibility.",
+      "Mr. Motunrayo Fasakin is a highly accomplished Registered Nurse and healthcare strategist with over eighteen years of clinical and case management experience, complemented by a strong and growing proficiency in finance and financial management. Her career reflects a rare blend of compassionate patient care and analytical financial insight—positioning her as a forward-thinking leader in the evolving intersection of healthcare delivery and fiscal responsibility.",
       "Currently serving as a Senior Case Manager and Compassion Support Coordinator at United Healthcare, Tunrayo not only leads care coordination and clinical assessments but also applies financial principles to optimize resource allocation, reduce unnecessary costs, and improve long-term patient outcomes. Her ability to interpret healthcare economics, manage utilization, and align care plans with financial goals has made her a trusted advisor within multidisciplinary teams.",
       "Tunrayo's interest in finance extends beyond operational efficiency. She is deeply engaged in personal finance, healthcare budgeting, and strategic planning, with a focus on empowering patients and families through financial literacy and informed decision-making. Her approach integrates SMART goal-setting with cost-conscious care models, ensuring that both clinical and financial needs are met with precision and empathy.",
       "Motunrayo Fasakin is not only a healthcare provider—she is a systems thinker, a financial steward, and a compassionate advocate. Her unique skill set enables her to navigate complex clinical environments while driving sustainable, patient-centered solutions that honor both health and financial well-being."
@@ -116,7 +116,7 @@ const leadersData = {
   nelson_ogungbemi: {
     name: "Barrister Ogungbemi Nelson Muyiwa",
     position: "Legal Adviser",
-    image: "/nelson.png",
+    image: "/nelson.jpeg",
     biography: [
       "Barrister Ogungbemi Nelson Muyiwa is a seasoned legal practitioner with over a decade of experience in litigation, corporate law, and regulatory compliance. As Principal Partner at Nelson M. Ogungbemi & Co., he has successfully represented clients in high-stakes cases, including class actions and white-collar criminal defense, earning a reputation for strategic thinking and legal precision.",
       "In his role as Legal Adviser to FTA Financial Company Ltd, a firm committed to empowering individuals and businesses through innovative financial solutions, Barrister Ogungbemi brings a unique blend of legal insight and financial literacy. His deep understanding of financial management, contract law, and risk mitigation positions him to guide the company through regulatory landscapes, ensure compliance with Central Bank of Nigeria (CBN) standards, and support the development of secure, transparent financial products.",
@@ -138,7 +138,7 @@ const leadersData = {
     ]
   },
   philadephia_samuel: {
-    name: "Philadelphia Samuel",
+    name: "Ms. Philadelphia Samuel",
     position: "Executive Director",
     image: "/philadephia.jpeg",
     biography: [
@@ -155,7 +155,7 @@ const leadersData = {
     ]
   },
   omogoke_desmond: {
-    name: "Omogoke Desmond",
+    name: "Mr. Omogoke Desmond",
     position: "Advisory Board Member",
     image: "/desmond_omogoke.png",
     biography: [
